@@ -1,0 +1,1 @@
+from matrixalg.main import main
