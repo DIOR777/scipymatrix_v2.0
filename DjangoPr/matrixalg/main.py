@@ -1,4 +1,5 @@
 import random
+import numpy as np
 
 
 def get(arr, size):
@@ -11,7 +12,7 @@ def get(arr, size):
 
 def to_string(arr, size):
     result = []
-    for i in range(size - 1):
+    for i in range(size):
         a = ''
         for value in arr[i]:
             a += str(value) + ' '
@@ -21,7 +22,7 @@ def to_string(arr, size):
 
 def main(size):
     n = int(size)
-    arr = [[0] * n for i in range(n)]
+    arr = np.zeros(n * n, dtype=np.int32).reshape(n, n)
     for i in range(n):
         for j in range(n):
             arr[i][j] = random.randint(10, 99)
